@@ -1,0 +1,67 @@
+@import "../../../../assets/style/index"
+
+
+.box
+    width: 100%
+    height: auto
+
+    padding-top: $padding
+
+    * h1
+        font-size: 2rem
+        text-transform: uppercase
+
+    * h2
+        font-size: 2rem
+        line-height: 2.75rem
+
+
+    * button
+        background-color: $black
+        color: $white
+
+.boxContent
+    width: 100%
+    height: 100%
+    max-width: $standard_max_width
+    margin: 0 auto
+
+.boxItems
+    width: 100%
+    height: 65vh
+    min-height: 40rem
+
+    border: .1rem solid $black
+
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+    position: relative
+
+.boxCardSection
+    width: 40%
+    min-height: 10rem
+
+    border: .1rem solid red
+
+.boxCard
+    width: 100%
+    height: auto
+
+    > div
+        margin-top: $padding-sm
+
+        &:nth-child(1)
+            margin-top: 0
+
+
+.boxImage
+    position: absolute
+    left: 5rem
+    width: 100vw
+    height: 100%
+
+    border: .1rem solid red
+    border-top-left-radius: $radius
+    border-bottom-left-radius: $radius

@@ -1,0 +1,29 @@
+@import "../../assets/style/index"
+
+.box
+    width: 100%
+    min-height: 100vh
+    padding-bottom: 7.5rem
+
+    @include md
+        padding-bottom: $section_margin
+
+.boxContent
+    width: 100%
+    max-width: $standard_max_width
+    height: auto
+    margin: 0 auto
+
+    * h1
+        font-size: 2rem
+
+    @include md
+        padding: 0 $padding
+
+    @include xsm
+        padding: 0 $padding-sm
+
+.cartTitle
+    width: 100%
+    text-align: center
+    padding-top: calc(#{$section_margin} / 2)

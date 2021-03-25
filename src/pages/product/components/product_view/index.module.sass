@@ -1,0 +1,186 @@
+@import '../../../../assets/style/index'
+
+
+$full_width_percent: 1
+$image_width_percent: 0.325
+
+// The detail and info have the same with, if the image width changes, so will they
+$detail_width_percent: calc((1 - #{$image_width_percent}) / 2)
+$info_width_percent: calc((1 - #{$image_width_percent}) / 2)
+
+
+.box
+    width: 100%
+    height: 100%
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    @include md
+        padding: 0
+
+    * h1
+        font-size: 2rem
+        text-transform: uppercase
+
+        padding: $padding 0
+
+        @include md
+            padding-top: 0
+            padding-bottom: $padding
+
+        @include xsm
+            padding-bottom: $padding-sm
+
+    * p
+        font-size: 1.6rem
+
+    * button
+        text-transform: uppercase
+
+
+.boxContent
+    width: 100%
+    height: auto
+
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+
+    position: relative
+
+    @include md
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: auto
+        grid-row-gap: 1rem
+
+        padding: 0
+
+    @include sm
+        grid-gap: 0
+
+    @include xsm
+        grid-template-columns: 1fr
+
+
+    &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        width: 100vw
+        height: 100%
+
+        border-top: .1rem solid $black
+        border-bottom: .1rem solid $black
+
+
+    > div
+        width: 100%
+        height: auto
+        position: relative
+
+        border-right: .1rem solid $black
+
+        @include md
+            overflow: hidden
+
+        @include xsm
+            border-right: none
+
+        &:nth-child(1)
+            padding-right: $padding
+
+            @include md
+                padding: $padding
+                border-left: .1rem solid $black
+
+            @include xsm
+                padding: $padding-sm
+                border-left: none
+
+
+        &:nth-child(2)
+            padding: $padding
+
+            @include xsm
+                padding: $padding-sm
+                border-top: .1rem solid $black
+                border-bottom: .1rem solid $black
+
+        &:nth-child(3)
+            border-right: 0
+            padding-left: $padding
+
+            @include xsm
+                border-top: none
+                padding: $padding-sm
+                padding-top: 0
+
+
+.boxSection
+    > div
+        &:nth-child(1)
+            display: flex
+            justify-content: space-between
+
+
+        &:nth-child(3)
+            padding-top: $padding
+
+            @include xsm
+                padding-top: $padding-sm
+
+.bar
+    width: 50vw
+    height: .1rem
+    background-color: $black
+
+    position: absolute
+
+    @include xsm
+        width: 100%
+
+.barLeft
+    left: 0
+
+    @include sm
+        display: none
+
+.barRight
+    right: 0
+
+    @include xsm
+        left: 0
+
+.boxTitle
+    > h1
+        &:nth-child(2)
+            display: none
+
+            @include md
+                display: block
+
+.boxPrice
+    @include md
+        display: none !important
+
+    @include sm
+
+.boxHideFromMd
+    @include md
+        display: none
+
+    @include xsm
+        display: block
+
+
+.boxShowInMd
+    display: none
+
+    @include md
+        display: block
+
+    @include xsm
+        display: none

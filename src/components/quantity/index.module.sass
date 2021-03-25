@@ -1,0 +1,38 @@
+@import ../../assets/style/index
+
+.quantity
+    $icon_size: 5rem
+    width: 100%
+    height: auto
+
+    display: grid
+    grid-template-columns: $icon_size 1fr $icon_size
+
+    border: .1rem solid $black
+    border-radius: $radius
+
+    * span
+        font-size: 1.8rem
+
+    > div
+        width: 100%
+        height: $icon_size
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+        &:nth-child(1),
+        &:nth-child(3)
+            cursor: pointer
+            padding: 1.75rem
+            &:hover
+                opacity: .5
+
+.oldQuantityButtons
+    > div
+        &:nth-child(1)
+            border-top-right-radius: $radius !important
+
+        &:nth-child(2)
+            border-bottom-right-radius: $radius !important

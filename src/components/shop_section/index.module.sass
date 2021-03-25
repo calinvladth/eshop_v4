@@ -1,0 +1,49 @@
+@import '../../assets/style/index'
+
+.box
+    width: 100%
+    height: auto
+
+.boxContent
+    width: 100%
+    max-width: $standard_max_width
+    margin: 0 auto
+
+    position: relative
+
+    @include md
+        padding: 0 $padding
+
+    @include xsm
+        padding: 0 $padding-sm
+
+    > div
+        &:nth-child(2)
+            margin-top: $section_margin
+
+.boxProducts
+    width: 100%
+    display: grid
+    grid-gap: calc(#{$padding} * 2)
+    grid-template-columns: repeat(4, 1fr)
+
+
+    position: relative
+
+    //@include sm
+    //    grid-template-columns: repeat(2, 1fr)
+
+    > div
+        display: block
+        width: 100%
+        height: auto
+
+        position: relative
+
+        //padding: $padding
+
+        //@include sm
+        //    padding: $padding-sm
+
+    > p
+        font-size: 1.6rem

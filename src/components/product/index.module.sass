@@ -1,0 +1,53 @@
+@import '../../assets/style/index'
+
+
+.box
+    //border: .1rem solid red
+
+    * h1
+        font-size: 1.7rem
+        font-family: $font-title
+        text-align: center
+        text-transform: capitalize
+
+        @include xsm
+            font-size: 1.4rem
+
+    * p
+        font-size: 1.6rem
+
+        @include xsm
+            font-size: 1.3rem
+
+
+.product
+    width: 100%
+    position: relative
+
+    &:hover
+        opacity: .7
+        cursor: pointer
+
+.image
+    width: 100%
+    height: 30rem
+
+    background-color: $grey
+    border-radius: $radius
+
+    @include xsm
+        height: 32.5vh
+        min-height: 20rem
+        max-height: 40rem
+
+.boxInfo
+    width: 100%
+    text-align: center
+
+    padding-top: $padding
+
+    &:nth-child(1)
+        width: 100%
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis

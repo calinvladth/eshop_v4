@@ -1,0 +1,89 @@
+@import "../../../../assets/style/index"
+
+.box
+    width: 100%
+    height: auto
+
+    * h1
+        font-size: 2rem
+
+    * p
+        font-size: 1.6rem
+    //
+    //* h2
+    //    font-family: $font_title
+    //    font-size: 2rem
+
+.boxContent
+    $side_size: auto
+    max-width: $standard_max_width
+    width: 100%
+    height: auto
+    margin: 0 auto
+
+    > div
+        margin-top: $padding
+
+        &:nth-child(1)
+            margin-top: 0
+
+
+        > div
+            border: .1rem solid $black
+
+
+
+.boxOne
+    display: grid
+    grid-template-columns: auto 60%
+
+    > div
+        &:nth-child(1)
+            height: 90vh
+            min-height: 55rem
+            position: relative
+
+        &:nth-child(2)
+            text-align: right
+
+
+.boxTwo
+    display: grid
+    grid-template-columns: 60% auto
+
+    > div
+        &:nth-child(2)
+            height: 90vh
+            min-height: 55rem
+            position: relative
+
+
+.boxCardSection
+    width: 100%
+    height: 100%
+
+    display: flex
+    align-items: center
+
+
+.boxOneImage
+    position: absolute
+    top: 0
+    left: 0
+    width: calc(100% + #{$padding})
+    height: 100%
+
+    border: .1rem solid red
+
+    border-radius: $radius
+
+.boxTwoImage
+    position: absolute
+    top: 0
+    right: 0
+    width: calc(100% + #{$padding})
+    height: 100%
+
+    border: .1rem solid red
+
+    border-radius: $radius
