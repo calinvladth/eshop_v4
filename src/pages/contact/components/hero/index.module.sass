@@ -26,7 +26,6 @@
     height: 65vh
     min-height: 40rem
 
-    border: .1rem solid $black
 
     display: flex
     justify-content: flex-end
@@ -36,7 +35,6 @@
 
 .boxCardSection
     width: 40%
-    border: .1rem solid red
 
 .boxInfo
     width: 100%
@@ -51,9 +49,8 @@
 .boxImage
     position: absolute
     right: calc(40% - #{$padding})
-    width: 100vw
+    width: calc(100vw - 40% - #{$padding})
     height: 100%
 
-    border: .1rem solid red
     border-top-left-radius: $radius
     border-bottom-left-radius: $radius

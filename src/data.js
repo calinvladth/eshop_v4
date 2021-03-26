@@ -1,29 +1,41 @@
 import ContactHero from './assets/images/contact_hero.jpg'
-import Spinner from './assets/images/spin.gif'
 import TikTokIcon from "./assets/images/tik-tok.png";
 import FacebookIcon from "./assets/images/facebook.png";
 import InstagramIcon from "./assets/images/instagram.png";
 import PinterestIcon from "./assets/images/pinterest.png";
 import TwitterIcon from "./assets/images/twitter.png";
-import LogoLight from './assets/images/logo_light.png'
-import LogoDark from './assets/images/logo_dark.png'
+import Logo from './assets/images/logo.png'
 import HomeHero from './assets/images/home_hero.jpg'
+import AboutImageFirst from './assets/images/home_about_1.jpg'
+import AboutImageSecond from './assets/images/home_about_2.jpg'
+import ProductImage from './assets/images/product_page.jpg'
 
 export const headerData = {
-    logo_light: LogoLight,
-    logo_dark: LogoDark,
+    logo_light: Logo,
+    logo_dark: Logo,
 }
 
 export const homepageData = {
     hero_image: HomeHero,
-    hero_title: 'Timeless pieces for your exquisite taste, handrafted with care and passion. \nBrowse our collections now.',
-    hero_shop_button: 'start shopping',
-    spinner: Spinner,
-    about_slogan: 'about us',
-    about_title: 'Delilah\'s story',
-    about_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi dicta dolor\n' +
-        '                        doloremque est illo laboriosam nam, nulla pariatur quis quisquam quos, sint ullam? Dolorem, ex\n' +
-        '                        id. Ad eaque eum veniam vero. Architecto, officia, perspiciatis.',
+    hero_title: 'Cecile soaps',
+    hero_subtitle: 'Organic homemage soaps for your perfect skin',
+    hero_shop_button: 'buy now',
+    about: {
+        fist: {
+            title: 'Our story',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad id maxime modi quos. A atque dicta, excepturi fugit maxime nesciunt perspiciatis praesentium, quas quod rerum, sunt ut voluptatibus! Ad consectetur corporis enim, error et exercitationem fugiat, incidunt magni natus perferendis quaerat quibusdam ratione veniam voluptatem!',
+            image: AboutImageFirst
+        },
+        second: {
+            title: 'Our process',
+            text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad id maxime modi quos. A atque dicta, excepturi fugit maxime nesciunt perspiciatis praesentium, quas quod rerum, sunt ut voluptatibus! Ad consectetur corporis enim, error et exercitationem fugiat, incidunt magni natus perferendis quaerat quibusdam ratione veniam voluptatem!',
+            image: AboutImageSecond
+        }
+    }
+}
+
+export const productpageData = {
+    description_image: ProductImage
 }
 
 export const aboutDataFooter = {
@@ -36,7 +48,6 @@ export const aboutDataFooter = {
 export const contactpageData = {
     title: "Contact us",
     subtitle: "Fell free to contact us and we will get back to you as soon as possible.",
-
     image: ContactHero
 }
 

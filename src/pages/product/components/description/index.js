@@ -1,9 +1,10 @@
 import React from "react";
 import style from './index.module.sass'
 import CardComponent from "../../../../components/card";
-import {contactData, contactpageData} from "../../../../data";
+import {contactData, contactpageData, productpageData} from "../../../../data";
+import {setBackgroundImage} from "../../../../services/image";
 
-const ProductDescriptionComponent = () => (
+const ProductDescriptionComponent = ({description}) => (
     <div className={style.box}>
 
         <div className={style.boxContent}>
@@ -15,17 +16,14 @@ const ProductDescriptionComponent = () => (
                             <h1>Description</h1>
                         </div>
                         <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid asperiores deserunt
-                                dolor doloremque eaque eos et fuga id impedit incidunt inventore iure labore laborum
-                                libero maiores maxime minima mollitia non odit praesentium quam quas quis, repellendus
-                                repudiandae sequi sit suscipit tempore temporibus tenetur ut?</p>
+                            <p>{description}</p>
                         </div>
                     </div>
                 </CardComponent>
             </div>
 
-            <div className={style.boxImage}>
-                1
+            <div className={style.boxImage} style={setBackgroundImage(productpageData.description_image)}>
+                &nbsp;
             </div>
 
         </div>

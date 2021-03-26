@@ -9,6 +9,7 @@ export const GetRelatedProducts = ({category, product}) => (dispatch, getState) 
         data: {
             category: category,
             product: product,
+            limit: 4,
             shop: process.env.REACT_APP_SHOP_NAME
         }
     })

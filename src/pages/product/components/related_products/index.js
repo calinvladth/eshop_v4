@@ -27,9 +27,9 @@ const RelatedProductsComponent = () => {
                     related_products.data.length > 0
                         ?
                         related_products.data.map((o, i) => {
-                            return i < 3 ? <div key={o.id}>
+                            return <div key={o.id}>
                                 <ProductComponent product={o}/>
-                            </div> : null
+                            </div>
                         })
                         :
                         <div>

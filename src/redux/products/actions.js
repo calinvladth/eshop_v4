@@ -8,6 +8,8 @@ export const GetProducts = (page = 1, filters = {}) => (dispatch, getState) => {
     filters['active'] = true
     filters['shop'] = process.env.REACT_APP_SHOP_NAME
     filters['page'] = page
+    filters['limit'] = 8
+
     const str = addQuery(filters)
     axios({
         method: 'GET',

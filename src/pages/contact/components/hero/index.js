@@ -2,6 +2,7 @@ import React from "react";
 import style from './index.module.sass'
 import CardComponent from "../../../../components/card";
 import {contactData, contactpageData} from "../../../../data";
+import {setBackgroundImage} from "../../../../services/image";
 
 const HeroComponent = () => (
     <div className={style.box}>
@@ -28,9 +29,7 @@ const HeroComponent = () => (
                     </CardComponent>
                 </div>
 
-                <div className={style.boxImage}>
-                    1
-                </div>
+                <div className={style.boxImage} style={setBackgroundImage(contactpageData.image)}>&nbsp;</div>
 
             </div>
 

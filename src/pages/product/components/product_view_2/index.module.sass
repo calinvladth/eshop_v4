@@ -12,26 +12,25 @@
     grid-gap: $padding
 
     > div
-        border: .1rem solid red
-
         &:nth-child(1)
             height: auto
 
         &:nth-child(2)
             display: grid
-            grid-template-rows: 1fr 10rem
+            grid-template-rows: 1fr auto
             grid-row-gap: $padding
-
-            > div
-                border: .1rem solid blue
 
 .boxImage
     width: 100%
-    height: 100%
-    max-height: 90vh
+    height: 90vh
     min-height: 50rem
-    border: .1rem solid yellow
+    max-height: 60rem
 
+
+.boxGallery
+    width: 100%
+    height: 100%
+    overflow: hidden
 
 .details
     width: 100%
@@ -49,5 +48,73 @@
 
         &:nth-child(1)
             margin-top: 0
+
         &:nth-child(2)
             margin-top: 0
+
+.detailsAction
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+    > div
+        margin-left: $padding
+
+        &:nth-child(1)
+            margin-left: 0
+
+.detailsSpecs
+    > div
+        display: grid
+        grid-template-columns: 35% 1fr
+        grid-gap: $padding-sm
+
+        > div
+
+            &:nth-child(1)
+                > p
+                    text-transform: uppercase
+
+            &:nth-child(2)
+                > p
+                    &:first-letter
+                        text-transform: uppercase
+
+.gallery
+    $width: 12.5rem
+    $height: 10rem
+    width: 100%
+    height: auto
+
+    display: flex
+    overflow: auto
+    flex-direction: row
+    justify-content: flex-start
+    align-items: flex-start
+
+    > div
+        width: $width
+        min-width: $width
+        height: $height
+        //border: .1rem solid $black
+        border-radius: $radius
+        background-color: $grey
+
+        margin-left: 5%
+
+        cursor: pointer
+
+        @include md
+            min-height: 15rem
+            height: 30vh
+            max-height: 20rem
+
+        &:hover
+            border: .1rem solid $white
+            opacity: .9
+
+        &:nth-child(1)
+            margin-left: 0
+
+.imageActive
+    border: .2rem solid $white !important
