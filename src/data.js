@@ -1,14 +1,14 @@
-import ContactHero from './assets/images/contact_hero.jpg'
+import ContactHero from './assets/images/contact_hero.webp'
 import TikTokIcon from "./assets/images/tik-tok.png";
 import FacebookIcon from "./assets/images/facebook.png";
 import InstagramIcon from "./assets/images/instagram.png";
 import PinterestIcon from "./assets/images/pinterest.png";
 import TwitterIcon from "./assets/images/twitter.png";
 import Logo from './assets/images/logo.png'
-import HomeHero from './assets/images/home_hero.jpg'
-import AboutImageFirst from './assets/images/home_about_1.jpg'
-import AboutImageSecond from './assets/images/home_about_2.jpg'
-import ProductImage from './assets/images/product_page.jpg'
+import HomeHero from './assets/images/home_hero.webp'
+import AboutImageFirst from './assets/images/home_about_1.webp'
+import AboutImageSecond from './assets/images/home_about_2.webp'
+import ProductImage from './assets/images/product_page.webp'
 
 export const headerData = {
     logo_light: Logo,
