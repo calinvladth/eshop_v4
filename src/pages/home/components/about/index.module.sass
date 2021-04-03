@@ -29,11 +29,19 @@
     display: grid
     grid-template-columns: auto 60%
 
+    @include md
+        grid-template-columns: 1fr
+
     > div
         &:nth-child(1)
             height: 90vh
             min-height: 55rem
             position: relative
+
+            @include md
+                grid-row: 2
+                height: 70vh
+                min-height: 40rem
 
         &:nth-child(2)
             text-align: right
@@ -43,11 +51,19 @@
     display: grid
     grid-template-columns: 60% auto
 
+    @include md
+        grid-template-columns: 1fr
+
     > div
         &:nth-child(2)
             height: 90vh
             min-height: 55rem
             position: relative
+
+            @include md
+                grid-row: 2
+                height: 70vh
+                min-height: 40rem
 
 
 .boxCardSection
@@ -65,7 +81,14 @@
     width: calc(100% + #{$padding})
     height: 100%
 
+    background-color: $white
+
     border-radius: $radius
+
+    @include md
+        width: 100%
+        height: 100%
+        top: -1rem
 
 .boxTwoImage
     position: absolute
@@ -74,4 +97,11 @@
     width: calc(100% + #{$padding})
     height: 100%
 
+    background-color: $white
+
     border-radius: $radius
+
+    @include md
+        width: 100%
+        height: 100%
+        top: -1rem

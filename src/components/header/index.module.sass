@@ -6,6 +6,8 @@
 
     color: $black
 
+    padding: 0 $padding-sides
+
 .boxContent
     width: 100%
     max-width: $standard_max_width
@@ -21,8 +23,7 @@
 
 
     @include md
-        grid-template-columns: 1fr
-        padding-top: 2.5rem
+        //grid-template-columns: 10rem 1fr
 
 .logoBox
     width: auto
@@ -30,7 +31,7 @@
     position: relative
     z-index: 1000
 
-    padding: 1rem 0
+    padding: 1.75rem 0
 
     display: flex
     justify-content: center
@@ -38,17 +39,20 @@
 
     cursor: pointer
 
+    @include md
+        padding: 2rem 0
+
 
     &:hover
         opacity: .7
 
-    @include md
-        width: 100%
-        height: 5rem
-
-        display: flex
-        justify-content: center
-        align-items: center
+    //@include md
+    //    width: 100%
+    //    height: 5rem
+    //
+    //    display: flex
+    //    justify-content: center
+    //    align-items: center
 
 .logo
     width: 100%
@@ -73,10 +77,6 @@
     width: auto
     height: auto
 
-    @include md
-        display: flex
-        justify-content: center
-        align-items: center
 
 .content
     width: 100%
@@ -84,10 +84,6 @@
 
     display: flex
     justify-content: flex-end
-    align-items: center
-
-    @include md
-        width: auto
 
 
 .pages
@@ -106,13 +102,11 @@
         justify-content: center
         align-items: center
 
+        @include md
+            margin-left: $padding-sm
+
         &:nth-child(1)
             margin-left: 0
-
-    @include sm
-        > div
-            margin-left: 1.75rem
-
 
 
 .linkActive
@@ -123,8 +117,8 @@
     height: auto
     margin-left: 2.5rem
 
-    @include sm
-        margin-left: 1.75rem
+    @include md
+        margin-left: $padding-sm
 
 .iconCart
     width: 3.5rem
@@ -134,6 +128,8 @@
 
     position: relative
     z-index: 1000
+    @include md
+        width: 3rem
 
     > span
         position: absolute

@@ -22,41 +22,45 @@ import ShippingAndRefundPage, {ShippingAndRefundPath} from "./legal/shipping_and
 import TermsAndConditionsPage, {TermsAndConditionsPath} from "./legal/terms_and_conditions";
 import NewsletterSuccessPage, {NewsletterSuccessPath} from "./newsletter_success";
 
+import style from './layout.module.sass'
 
 const Routes = () => {
     return (
         <BrowserRouter>
             <div>
                 <HeaderComponent/>
-                <Switch>
-                    {/*Home*/}
-                    <Route path={HomePath} exact><HomePage/></Route>
-                    {/*Contact*/}
-                    <Route path={ContactPath}><ContactPage/></Route>
-                    {/*Product Page*/}
-                    <Route path={ProductPath}><ProductPage/></Route>
-                    {/*{Cart Page}*/}
-                    <Route path={CartPath}><CartPage/></Route>
-                    {/*Checkout Page*/}
-                    <Route path={CheckoutPath}><CheckoutPage/></Route>
-                    {/*Success Pages*/}
-                    <Route path={OrderSuccessPath}><OrderSuccessPage/></Route>
-                    <Route path={MessageSuccessPath}><MessageSuccessPage/></Route>
-                    <Route path={NewsletterSuccessPath}><NewsletterSuccessPage/></Route>
-                    {/*Legal*/}
-                    <Route path={DataPrivacyPath} exact><DataPrivacyPage/></Route>
-                    <Route path={PaymentMethodsPath} exact><PaymentMethodsPage/></Route>
-                    <Route path={ShippingAndRefundPath} exact><ShippingAndRefundPage/></Route>
-                    <Route path={TermsAndConditionsPath} exact><TermsAndConditionsPage/></Route>
-                    {/*<Route path={CookiePath} component={Cookie}/>*/}
-                    {/*<Route path={PrivacyPath} component={Privacy}/>*/}
-                    {/*<Route path={TermsPath} component={Terms}/>*/}
+                <div className={style.websiteContent}>
+                    <Switch>
+                        {/*Home*/}
+                        <Route path={HomePath} exact><HomePage/></Route>
+                        {/*Contact*/}
+                        <Route path={ContactPath}><ContactPage/></Route>
+                        {/*Product Page*/}
+                        <Route path={ProductPath}><ProductPage/></Route>
+                        {/*{Cart Page}*/}
+                        <Route path={CartPath}><CartPage/></Route>
+                        {/*Checkout Page*/}
+                        <Route path={CheckoutPath}><CheckoutPage/></Route>
+                        {/*Success Pages*/}
+                        <Route path={OrderSuccessPath}><OrderSuccessPage/></Route>
+                        <Route path={MessageSuccessPath}><MessageSuccessPage/></Route>
+                        <Route path={NewsletterSuccessPath}><NewsletterSuccessPage/></Route>
+                        {/*Legal*/}
+                        <Route path={DataPrivacyPath} exact><DataPrivacyPage/></Route>
+                        <Route path={PaymentMethodsPath} exact><PaymentMethodsPage/></Route>
+                        <Route path={ShippingAndRefundPath} exact><ShippingAndRefundPage/></Route>
+                        <Route path={TermsAndConditionsPath} exact><TermsAndConditionsPage/></Route>
+                        {/*<Route path={CookiePath} component={Cookie}/>*/}
+                        {/*<Route path={PrivacyPath} component={Privacy}/>*/}
+                        {/*<Route path={TermsPath} component={Terms}/>*/}
 
-                    {/*404*/}
-                    {/*<Route component={FOF}/>*/}
-                    <Route path="/404"><NotFoundPage/></Route>
-                    <Route component={NotFoundPage}/>
-                </Switch>
+                        {/*404*/}
+                        {/*<Route component={FOF}/>*/}
+                        <Route path="/404"><NotFoundPage/></Route>
+                        <Route component={NotFoundPage}/>
+                    </Switch>
+                </div>
+
                 <FooterComponent/>
             </div>
         </BrowserRouter>

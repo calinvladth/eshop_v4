@@ -1,186 +1,158 @@
 @import '../../../../assets/style/index'
 
-
-$full_width_percent: 1
-$image_width_percent: 0.325
-
-// The detail and info have the same with, if the image width changes, so will they
-$detail_width_percent: calc((1 - #{$image_width_percent}) / 2)
-$info_width_percent: calc((1 - #{$image_width_percent}) / 2)
-
-
 .box
     width: 100%
-    height: 100%
+    height: auto
 
-    display: flex
-    justify-content: center
-    align-items: center
+.boxContent
+    width: 100%
+
+    display: grid
+    grid-template-columns: 40% 1fr
+    grid-gap: $padding
 
     @include md
-        padding: 0
+        grid-template-columns: 47.5% 1fr
+
+    @include sm
+        grid-template-columns: 1fr
+
+    @include xsm
+        grid-gap: $padding-sm
+
+
+    > div
+        &:nth-child(1)
+            height: auto
+
+        &:nth-child(2)
+            display: grid
+            grid-template-rows: 1fr auto
+            grid-row-gap: $padding
+
+            @include xsm
+                grid-row-gap: $padding-sm
+
+
+.boxImage
+    width: 100%
+    height: 90vh
+    min-height: 50rem
+    max-height: 60rem
+
+    background-color: $white
+    border-radius: $radius
+
+    @include md
+        max-height: 50rem
+
+    @include sm
+        max-height: none
+
+
+.boxGallery
+    width: 100%
+    height: 100%
+    overflow: hidden
+
+    @include sm
+        grid-row: 1
+
+.details
+    width: 100%
+    height: auto
 
     * h1
         font-size: 2rem
         text-transform: uppercase
 
-        padding: $padding 0
-
-        @include md
-            padding-top: 0
-            padding-bottom: $padding
-
-        @include xsm
-            padding-bottom: $padding-sm
-
     * p
-        font-size: 1.6rem
+        font-size: 1.5rem
 
-    * button
-        text-transform: uppercase
+    > div
+        margin-top: $padding-sm
 
+        &:nth-child(1)
+            margin-top: 0
 
-.boxContent
+        &:nth-child(2)
+            margin-top: 0
+
+.detailsAction
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+    > div
+        margin-left: $padding
+
+        &:nth-child(1)
+            margin-left: 0
+
+        &:nth-child(2)
+            @include sm
+                width: 100%
+
+            > button
+                @include sm
+                    width: 100%
+
+.detailsSpecs
+    > div
+        display: grid
+        grid-template-columns: 35% 1fr
+        grid-gap: $padding-sm
+
+        > div
+
+            &:nth-child(1)
+                > p
+                    text-transform: uppercase
+
+            &:nth-child(2)
+                > p
+                    &:first-letter
+                        text-transform: uppercase
+
+.gallery
+    $width: 12.5rem
+    $height: 10rem
     width: 100%
     height: auto
 
-    display: grid
-    grid-template-columns: repeat(3, 1fr)
-
-    position: relative
-
-    @include md
-        grid-template-columns: repeat(2, 1fr)
-        grid-template-rows: auto
-        grid-row-gap: 1rem
-
-        padding: 0
-
-    @include sm
-        grid-gap: 0
-
-    @include xsm
-        grid-template-columns: 1fr
-
-
-    &:before
-        content: ''
-        position: absolute
-        top: 0
-        left: 50%
-        transform: translateX(-50%)
-        width: 100vw
-        height: 100%
-
-        border-top: .1rem solid $black
-        border-bottom: .1rem solid $black
+    display: flex
+    overflow: auto
+    flex-direction: row
+    justify-content: flex-start
+    align-items: flex-start
 
 
     > div
-        width: 100%
-        height: auto
-        position: relative
+        width: $width
+        min-width: $width
+        height: $height
+        background-color: $white
+        //border: .1rem solid $black
+        border-radius: $radius
 
-        border-right: .1rem solid $black
+        margin-left: 5%
+
+        cursor: pointer
 
         @include md
-            overflow: hidden
+            height: 15rem
 
         @include xsm
-            border-right: none
+            width: calc(33.33% - #{$padding-sm / 2})
+            height: 17rem
+            margin-left: $padding-sm
+
+        &:hover
+            border: .1rem solid $white
+            opacity: .9
 
         &:nth-child(1)
-            padding-right: $padding
+            margin-left: 0
 
-            @include md
-                padding: $padding
-                border-left: .1rem solid $black
-
-            @include xsm
-                padding: $padding-sm
-                border-left: none
-
-
-        &:nth-child(2)
-            padding: $padding
-
-            @include xsm
-                padding: $padding-sm
-                border-top: .1rem solid $black
-                border-bottom: .1rem solid $black
-
-        &:nth-child(3)
-            border-right: 0
-            padding-left: $padding
-
-            @include xsm
-                border-top: none
-                padding: $padding-sm
-                padding-top: 0
-
-
-.boxSection
-    > div
-        &:nth-child(1)
-            display: flex
-            justify-content: space-between
-
-
-        &:nth-child(3)
-            padding-top: $padding
-
-            @include xsm
-                padding-top: $padding-sm
-
-.bar
-    width: 50vw
-    height: .1rem
-    background-color: $black
-
-    position: absolute
-
-    @include xsm
-        width: 100%
-
-.barLeft
-    left: 0
-
-    @include sm
-        display: none
-
-.barRight
-    right: 0
-
-    @include xsm
-        left: 0
-
-.boxTitle
-    > h1
-        &:nth-child(2)
-            display: none
-
-            @include md
-                display: block
-
-.boxPrice
-    @include md
-        display: none !important
-
-    @include sm
-
-.boxHideFromMd
-    @include md
-        display: none
-
-    @include xsm
-        display: block
-
-
-.boxShowInMd
-    display: none
-
-    @include md
-        display: block
-
-    @include xsm
-        display: none
+.imageActive
+    border: .2rem solid $white !important

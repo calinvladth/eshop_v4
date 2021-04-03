@@ -11,12 +11,6 @@
 
     position: relative
 
-    @include md
-        padding: 0 $padding
-
-    @include xsm
-        padding: 0 $padding-sm
-
     > div
         &:nth-child(2)
             margin-top: $section_margin
@@ -27,13 +21,16 @@
     grid-gap: calc(#{$padding} * 2)
     grid-template-columns: repeat(4, 1fr)
 
-    padding-top: 1rem
+    padding-top: $padding-sides
 
 
     position: relative
 
-    //@include sm
-    //    grid-template-columns: repeat(2, 1fr)
+    @include md
+        grid-gap: calc(#{$padding} * 1)
+
+    @include sm
+        grid-template-columns: repeat(2, 1fr)
 
     > div
         display: block

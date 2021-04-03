@@ -1,7 +1,7 @@
 import React from "react";
 import style from './index.module.sass'
 import CardComponent from "../../../../components/card";
-import {contactData, contactpageData, productpageData} from "../../../../data";
+import {productpageData} from "../../../../data";
 import {setBackgroundImage} from "../../../../services/image";
 
 const ProductDescriptionComponent = ({description}) => (

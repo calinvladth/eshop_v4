@@ -1,6 +1,5 @@
 import React, {createRef, useEffect} from 'react'
 import style from './layout.module.sass'
-import ProductViewProductComponent from "./components/product_view";
 import RelatedProductsComponent from "./components/related_products";
 import {useDispatch, useSelector} from "react-redux";
 import {ClearProductState, GetProductByPk} from "../../redux/product";
@@ -10,9 +9,8 @@ import LoadingComponent from "../../components/loading";
 import NotFoundComponent from "../../components/not_found";
 import {ShopPath} from "../home";
 import {useHistory} from "react-router";
-import DescriptionAndSpecs from "./components/description_and_specs";
-import ProductViewComponent from "./components/product_view_2";
 import ProductDescriptionComponent from "./components/description";
+import ProductViewComponent from "./components/product_view";
 
 const ProductPage = () => {
     const dispatch = useDispatch()

@@ -32,7 +32,7 @@ const RelatedProductsComponent = () => {
                             </div>
                         })
                         :
-                        <div>
+                        <div className={style.noProducts}>
                             <p className="font__paragraph">No related products</p>
                         </div>
                 }
